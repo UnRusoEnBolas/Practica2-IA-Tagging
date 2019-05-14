@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8c24bb14-bca4-4667-9c6d-781749cbe1b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ColorNaming.py" beforeDir="false" afterPath="$PROJECT_DIR$/ColorNaming.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EvaluationTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluationTest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0000.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0001.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0002.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0003.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0004.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0006.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0007.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0008.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0009.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0010.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0011.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0012.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0013.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0014.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0015.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0016.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0017.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0018.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0019.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0020.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0021.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0022.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0023.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0024.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0025.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0026.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0027.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0028.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0031.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0032.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0033.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0034.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0035.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0036.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0037.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0038.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0039.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0040.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0041.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0042.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0043.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0044.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0045.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0046.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0047.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0049.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0050.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0051.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0052.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0053.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0054.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0055.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0056.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0058.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0059.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0060.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0061.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0062.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0063.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0064.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0065.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0066.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0069.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0070.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0071.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0072.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0073.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0074.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0075.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0076.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0077.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0078.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0079.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0081.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0082.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0083.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0084.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0085.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0087.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0088.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0089.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0090.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0091.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0093.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0094.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0095.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0096.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0097.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0098.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0099.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0100.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0101.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0103.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0104.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0105.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0106.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0107.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0109.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0110.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0111.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0112.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0113.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0114.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0115.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0116.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0117.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0118.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0120.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0121.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0122.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0123.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0124.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0125.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0126.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0127.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0128.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0129.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0130.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0131.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0132.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0133.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0134.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0135.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0137.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0138.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0139.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0140.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0141.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0142.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0143.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0144.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0145.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0146.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0147.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0148.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0149.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0150.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0151.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0152.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0153.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0154.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0156.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0157.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0158.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0159.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0160.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0161.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0162.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0163.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0164.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0165.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0166.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0167.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0168.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0169.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0170.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0171.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0172.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0173.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0174.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0175.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0176.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0177.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0178.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0179.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0181.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0182.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0183.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0184.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0185.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0186.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0187.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0188.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0189.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0190.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0191.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0192.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0193.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0194.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0195.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0196.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0197.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0198.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0199.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0201.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0202.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0203.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0204.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/0205.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/LABELSlarge.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Images/LABELSlarge.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Images/LABELSsmall.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Images/LABELSsmall.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KMeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/KMeans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/KMeansTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/KMeansTest.py" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$EvaluationTest.coverage" NAME="EvaluationTest Coverage Results" MODIFIED="1557866423348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$Test.coverage" NAME="Test Coverage Results" MODIFIED="1557867380757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-255" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/KMeans.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2161">
+              <caret line="414" column="39" lean-forward="true" selection-start-line="414" selection-start-column="39" selection-end-line="414" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tagging.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-5339" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EvaluationTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="22" column="100" selection-start-line="22" selection-start-column="100" selection-end-line="22" selection-end-column="100" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/EvaluationTest.py" />
+        <option value="$PROJECT_DIR$/KMeans.py" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="689" />
+    <option name="y" value="-8" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Practica2-IA-Tagging" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Practica2-IA-Tagging" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.Test">
+    <configuration name="EvaluationTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Practica2-IA-Tagging" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/EvaluationTest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Practica2-IA-Tagging" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.Test" />
+        <item itemvalue="Python.EvaluationTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8c24bb14-bca4-4667-9c6d-781749cbe1b8" name="Default Changelist" comment="" />
+      <created>1557865543887</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1557865543887</updated>
+      <workItem from="1557865550284" duration="173000" />
+      <workItem from="1557865839626" duration="1560000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1733000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.35969663" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.21375267" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EvaluationTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="100" selection-start-line="22" selection-start-column="100" selection-end-line="22" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tagging.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5339" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KMeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2161">
+          <caret line="414" column="39" lean-forward="true" selection-start-line="414" selection-start-column="39" selection-end-line="414" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
