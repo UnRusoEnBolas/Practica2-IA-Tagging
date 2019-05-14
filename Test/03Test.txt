@@ -1,0 +1,1 @@
+{"o": {"colorspace": "ColorNaming", "K": 3, "km_init": "first", "fitting": "Fisher", "single_thr": 0.6, "metric": "basic", "verbose": false}, "f": "LABELSlarge.txt", "i": 143}
