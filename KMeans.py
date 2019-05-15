@@ -262,7 +262,7 @@ class KMeans():
                 - converges: booleano que nos indica si hemos convergido o no.
         """
 
-        return not np.amax(np.abs(self.centroids - self.old_centroids)) > self.options['tolerance']
+        return np.amax(np.linalg.norm(self.centroids - self.old_centroids, axis=1)) < self.options['tolerance']
 
     def _iterate(self):
         """

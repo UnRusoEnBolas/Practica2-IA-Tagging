@@ -10,7 +10,7 @@ from skimage import color
 import KMeans as km
 
 def NIUs():
-    return 111111, 222222, 3333333
+    return 1496128, 1425098, 1493035
 
 def loadGT(fileName):
     """@brief   Loads the file with groundtruth content
@@ -112,11 +112,9 @@ def processImage(im, options):
 
 ##  1- CHANGE THE IMAGE TO THE CORRESPONDING COLOR SPACE FOR KMEANS
     if options['colorspace'].lower() == 'ColorNaming'.lower():  
-        pass
-    elif options['colorspace'].lower() == 'RGB'.lower():        
-        pass 
+        im = cn.ImColorNamingTSELabDescriptor(im)
     elif options['colorspace'].lower() == 'Lab'.lower():        
-        pass
+        im = color.rgb2lab(im)
 
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
     if options['K']<2: # find the bes K
@@ -128,7 +126,7 @@ def processImage(im, options):
 
 ##  3- GET THE NAME LABELS DETECTED ON THE 11 DIMENSIONAL SPACE
     if options['colorspace'].lower() == 'RGB'.lower():        
-        pass     
+        pass
 
 #########################################################
 ##  THE FOLLOWING 2 END LINES SHOULD BE KEPT UNMODIFIED
