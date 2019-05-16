@@ -41,15 +41,11 @@ def distance(X, C):
     """
 
     # Generamos una matriz vacia con el tamaño necesario para almacenar nuestros datos.
-    dist = np.empty((X.shape[0], C.shape[0]))
+    distances = np.empty(shape=(X.shape[0], C.shape[0]))
 
     # Para cada punto en la primera lista...
-    for point_idx in range(X.shape[0]):
-        # ...iteraremos en cada punto de la segunda lista...
-        for cluster_idx in range(C.shape[0]):
-            # ... y utilizaremos el teorema de pitagoras para calcular la distancia euclidiana.
-            dist[point_idx][cluster_idx] = np.sqrt(np.sum((X[point_idx] - C[cluster_idx]) ** 2))
-
+    for point_idx in range(distances.shape[0]):
+            dist[point_idx][:] = np.sqrt(np.sum((X[point_idx][:] - C[:][:])** 2, axis=1))
     return dist
 
 
