@@ -258,16 +258,7 @@ class KMeans():
                 - converges: booleano que nos indica si hemos convergido o no.
         """
 
-        # Inicializamos nuestra variable converges a true
-        converges = True
-
-        # Por cada centroide...
-        for ctr in range(self.K):
-            # ...si su distancia euclidiana (Pitagoras again) respecto a su posicion anterior es mayor a tolerance...
-            if np.sqrt(np.sum((self.centroids[ctr] - self.old_centroids[ctr]) ** 2)) >= self.options['tolerance']:
-                # ...consideramos que nuestro algoritmo aun no ha terminado.
-                converges = False
-        return converges
+        return np.amax(np.linalg.norm(self.centroids - self.old_centroids, axis=1)) < self.options['tolerance']
 
     def _iterate(self):
         """
