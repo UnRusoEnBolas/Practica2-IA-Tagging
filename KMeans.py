@@ -45,8 +45,9 @@ def distance(X, C):
 
     # Para cada punto en la primera lista...
     for point_idx in range(distances.shape[0]):
-            dist[point_idx][:] = np.sqrt(np.sum((X[point_idx][:] - C[:][:])** 2, axis=1))
-    return dist
+        # ...calculamos su distancia euclideana contra cada uno de los centroides
+            distances[point_idx][:] = np.sqrt(np.sum((X[point_idx][:] - C[:][:])**2, axis=1))
+    return distances
 
 
 class KMeans():
@@ -187,7 +188,6 @@ class KMeans():
                 # Points sera nuestro iterador de la lista de puntos de la imagen.
                 point = 0
                 ctr = 0
-
                 while ctr < self.K:
                     # ...si nuestro punto no esta en centroides...
                     if self.X[point] not in self.centroids:
@@ -294,7 +294,7 @@ class KMeans():
         self._iterate()
 
         # Si el numero de iteraciones no supere al maximo y mientras no hayamos convergido.
-        while self.options['max_iter'] > self.num_iter and not self._converges():
+        while self.options['max_iter'] > self.num_iter and self._converges() == False:
 
             # Si verbose es true ploteamos los datos
             if self.options['verbose'] and self.num_iter != 0:
