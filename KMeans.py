@@ -260,7 +260,8 @@ class KMeans():
                 - converges: booleano que nos indica si hemos convergido o no.
         """
         for ctr in range(self.K):
-            return False if np.sqrt(np.sum((self.centroids[ctr] - self.old_centroids[ctr])**2)) > self.options['tolerance'] else True
+            if np.sqrt(np.sum((self.centroids[ctr] - self.old_centroids[ctr])**2)) > self.options['tolerance']: return False
+        return True
 
     def _iterate(self):
         """
@@ -305,7 +306,7 @@ class KMeans():
             # Realizaremos una nueva iteracion del algoritmo.
             self._iterate()
 
-        self.show_image()
+        #self.show_image()
 
 
     def bestK(self):
