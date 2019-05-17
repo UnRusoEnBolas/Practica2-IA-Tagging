@@ -213,7 +213,7 @@ class KMeans():
         # en lugar de almacenar el valor minimo de dicha fila lo que almacenaremos sera el numero
         # de su columna el cual coincide con el indice del centroide.
 
-        self.clusters = distance(self.X, self.centroids).argmin(axis=1)
+        self.clusters = np.argmin(distance(self.X, self.centroids), axis=1)
 
     def _get_centroids(self):
         """
