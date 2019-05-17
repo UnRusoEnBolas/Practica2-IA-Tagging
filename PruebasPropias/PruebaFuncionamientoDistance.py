@@ -27,6 +27,7 @@ print(relationPixCen)
 print("\n\n\n")
 
 print("Lista de pixeles pertenecientes a cada centroide (formacion de cluster): ")
+oldCentroids = np.copy(centroids)
 for cluster in range(0,3):
     print("---> Cluster " + str(cluster) +":")
     clusterPoints=pixels[relationPixCen==cluster]
@@ -37,4 +38,12 @@ for cluster in range(0,3):
     centroids[cluster] = np.mean(clusterPoints, axis=0)
 print("Los nuevos centroides son: ")
 print(centroids)
+print("\n")
+print("Respecto a los antiguos centroides, que eran: ")
+print(oldCentroids)
 print("\n\n")
+
+for ctr in range(0,3):
+    distDes = np.sqrt(np.sum((centroids[ctr]-oldCentroids[ctr])**2))
+    print("Distancia desplazada por el centroide " + str(ctr)+ ": " + str(distDes))
+    print("False") if distDes < 200 else print("True")

@@ -242,8 +242,10 @@ class KMeans():
                 # vertical (axis=0). Con lo que de una matriz nPuntos*nCanales colapsara
                 # en una lista de orden nCanales la cual sera almacenada en el centroide iterado.
                 self.centroids[ctr] = np.mean(self.X[self.clusters == ctr], axis=0)
+            '''
             else:
-                self.centroids[ctr] = np.random.rand(1, self.X.shape[1])*255
+                #self.centroids[ctr] = np.random.rand(1, self.X.shape[1])*255
+            '''
 
 
     def _converges(self):
@@ -257,8 +259,8 @@ class KMeans():
             Retorna:
                 - converges: booleano que nos indica si hemos convergido o no.
         """
-
-        return np.amax(np.linalg.norm(self.centroids - self.old_centroids, axis=1)) < self.options['tolerance']
+        for ctr in range(self.K):
+            return False if np.sqrt(np.sum((self.centroids[ctr] - self.old_centroids[ctr])**2)) > self.options['tolerance'] else True
 
     def _iterate(self):
         """
