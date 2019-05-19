@@ -306,7 +306,8 @@ class KMeans():
             # Realizaremos una nueva iteracion del algoritmo.
             self._iterate()
 
-        #self.show_image()
+        if self.options['verbose']:
+            self.show_image()
 
 
     def bestK(self):

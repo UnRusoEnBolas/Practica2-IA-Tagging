@@ -112,9 +112,11 @@ def processImage(im, options):
 
 ##  1- CHANGE THE IMAGE TO THE CORRESPONDING COLOR SPACE FOR KMEANS
     if options['colorspace'].lower() == 'ColorNaming'.lower():  
-        im = cn.ImColorNamingTSELabDescriptor(im)
+        pass
+    elif options['colorspace'].lower() == 'RGB'.lower():
+        pass
     elif options['colorspace'].lower() == 'Lab'.lower():        
-        im = color.rgb2lab(im)
+        pass
 
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
     if options['K']<2: # find the bes K
