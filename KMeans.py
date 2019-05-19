@@ -141,6 +141,8 @@ class KMeans():
             options['max_iter'] = np.inf
         if not 'fitting' in options:
             options['fitting'] = 'Fisher'
+        if not 'metric' in options:
+            options['metric'] = 'basic'
 
         self.options = options
 

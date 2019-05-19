@@ -33,18 +33,18 @@ def loadGT(fileName):
 
 def evaluate(description, GT, options):
     """@brief   EVALUATION FUNCTION
-    @param description LIST of color name lists: contain one lsit of color labels for every images tested
+    @param description LIST of color name lists: contain one list of color labels for every images tested
     @param GT LIST images to test and the real color names (see  loadGT)
     @options DICT  contains options to control metric, ...
     @return mean_score,scores mean_score FLOAT is the mean of the scores of each image
                               scores     LIST contain the similiraty between the ground truth list of color names and the obtained
     """
-#########################################################
-##  YOU MUST REMOVE THE REST OF THE CODE OF THIS FUNCTION
-##  AND CHANGE FOR YOUR OWN CODE
-#########################################################
-    scores = np.random.rand(len(description),1)        
-    return sum(scores)/len(description), scores
+    score = np.array([])
+
+    for i in range(len(description)):
+        score = np.append(score, similarityMetric(description[i], GT[i][1], options))
+
+    return  np.mean(score), score
 
 
 
@@ -55,21 +55,15 @@ def similarityMetric(Est, GT, options):
     @param options DICT  contains options to control metric, ...
     @return S float similarity between label LISTs
     """
-    
-    if options == None:
-        options = {}
-    if not 'metric' in options:
-        options['metric'] = 'basic'
-        
-#########################################################
-##  YOU MUST REMOVE THE REST OF THE CODE OF THIS FUNCTION
-##  AND CHANGE FOR YOUR OWN CODE
-#########################################################
+    similarity = 0
+
     if options['metric'].lower() == 'basic'.lower():
-        import random
-        return random.uniform(0, 1)        
-    else:
-        return 0
+        for c in Est:
+            if c in GT:
+                similarity += 1
+        similarity = similarity / len(Est)
+
+    return similarity
         
 def getLabels(kmeans, options):
     """@brief   Labels all centroids of kmeans object to their color names
@@ -81,24 +75,30 @@ def getLabels(kmeans, options):
     @return ind     LIST    indexes of centroids with the same color label
     """
 
-#########################################################
-##  YOU MUST REMOVE THE REST OF THE CODE OF THIS FUNCTION
-##  AND CHANGE FOR YOUR OWN CODE
-#########################################################
-##  remind to create composed labels if the probability of 
-##  the best color label is less than  options['single_thr']
-    cent = cn.ImColorNamingTSELabDescriptor(kmeans.centroids)
-    colors = ["Red", "Orange", "Brown", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "Grey", "White"]
-    print(colors[cent[0]>options['single_thr']])
-    if True:
-        # caso mas de un color
-        pass
-    else:
-        # caso un color
-        pass
+    colors = np.array(["Red", "Orange", "Brown", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "Grey", "White"])
 
-    meaningful_colors = ['color' + '%d' % i for i in range(kmeans.K)]
-    unique = range(kmeans.K)
+    cent = cn.ImColorNamingTSELabDescriptor(kmeans.centroids)
+    meaningful_colors = []
+    unique = []
+
+    for c in cent:
+        bool_array = c>options['single_thr']
+        if bool_array[bool_array==True].shape[0]:
+
+            max_arg = np.argmax(c)
+
+            color_to_append = colors[max_arg]
+            arg_to_append = max_arg
+        else:
+            sorted_idx = np.flip(np.argsort(c))
+
+            color_to_append = np.sort([colors[sorted_idx[0]], colors[sorted_idx[1]]])
+            color_to_append = color_to_append[0]+color_to_append[1]
+            arg_to_append = [sorted_idx[0], sorted_idx[1]]
+
+        if color_to_append not in meaningful_colors:
+            meaningful_colors.append(color_to_append)
+            unique.append(arg_to_append)
 
     return meaningful_colors, unique
 
@@ -123,11 +123,9 @@ def processImage(im, options):
 
 ##  1- CHANGE THE IMAGE TO THE CORRESPONDING COLOR SPACE FOR KMEANS
     if options['colorspace'].lower() == 'ColorNaming'.lower():  
-        pass
-    elif options['colorspace'].lower() == 'RGB'.lower():
-        pass
+        im = cn.ImColorNamingTSELabDescriptor(im)
     elif options['colorspace'].lower() == 'Lab'.lower():        
-        pass
+        im = color.rgb2lab(im)
 
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
     if options['K']<2: # find the bes K

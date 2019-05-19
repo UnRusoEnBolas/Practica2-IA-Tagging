@@ -20,10 +20,10 @@ if __name__ == "__main__":
 
     #'colorspace': 'RGB', 'Lab' o 'ColorNaming'
     t = time.time()
-    options = {'colorspace':'ColorNaming', 'K':3, 'synonyms':False, 'single_thr':0.2, 'verbose':False, 'km_init':'random', 'metric':'basic'}
+    options = {'colorspace':'RGB', 'K':3, 'synonyms':False, 'single_thr':0.9, 'verbose':False, 'km_init':'first', 'metric':'basic'}
 
     ImageFolder = 'Images'
-    GTFile = 'LABELSsmall.txt'
+    GTFile = 'LABELSlarge.txt'
     
     GTFile = ImageFolder + '/' + GTFile
     GT = lb.loadGT(GTFile)
@@ -31,8 +31,8 @@ if __name__ == "__main__":
     DBcolors = []
     for gt in GT:
         print(gt[0])
-        im = io.imread(ImageFolder+"/"+gt[0])    
-        colors,_,_ = lb.processImage(im, options)
+        im = io.imread(ImageFolder+"/"+gt[0])
+        colors,which,kmeans = lb.processImage(im, options)
         DBcolors.append(colors)
         
     encert,_ = lb.evaluate(DBcolors, GT, options)
