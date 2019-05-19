@@ -23,7 +23,7 @@ if __name__ == "__main__":
     options = {'colorspace':'ColorNaming', 'K':3, 'synonyms':False, 'single_thr':0.2, 'verbose':False, 'km_init':'random', 'metric':'basic'}
 
     ImageFolder = 'Images'
-    GTFile = 'LABELSlarge.txt'
+    GTFile = 'LABELSsmall.txt'
     
     GTFile = ImageFolder + '/' + GTFile
     GT = lb.loadGT(GTFile)

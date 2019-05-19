@@ -87,8 +87,19 @@ def getLabels(kmeans, options):
 #########################################################
 ##  remind to create composed labels if the probability of 
 ##  the best color label is less than  options['single_thr']
-    meaningful_colors = ['color'+'%d'%i for i in range(kmeans.K)]
+    cent = cn.ImColorNamingTSELabDescriptor(kmeans.centroids)
+    colors = ["Red", "Orange", "Brown", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "Grey", "White"]
+    print(colors[cent[0]>options['single_thr']])
+    if True:
+        # caso mas de un color
+        pass
+    else:
+        # caso un color
+        pass
+
+    meaningful_colors = ['color' + '%d' % i for i in range(kmeans.K)]
     unique = range(kmeans.K)
+
     return meaningful_colors, unique
 
 
