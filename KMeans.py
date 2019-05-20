@@ -44,9 +44,9 @@ def distance(X, C):
     distances = np.empty(shape=(X.shape[0], C.shape[0]))
 
     # Para cada punto en la primera lista...
-    for point_idx in range(distances.shape[0]):
+    for k in range(C.shape[0]):
         # ...calculamos su distancia euclideana contra cada uno de los centroides
-            distances[point_idx][:] = np.sqrt(np.sum((X[point_idx][:] - C[:][:])**2, axis=1))
+           distances[:,k] = np.sqrt(((X-C[k,:])**2).sum(axis=1))
     return distances
 
 
@@ -136,7 +136,7 @@ class KMeans():
         if not 'verbose' in options:
             options['verbose'] = False
         if not 'tolerance' in options:
-            options['tolerance'] = 10
+            options['tolerance'] = 0
         if not 'max_iter' in options:
             options['max_iter'] = np.inf
         if not 'fitting' in options:
@@ -185,7 +185,7 @@ class KMeans():
         else:
             if self.options['km_init'].lower() == 'first':
                 # Creamos la matriz centroides con tamaño K*nCanales y sin valores en sus celdas.
-                self.centroids = np.empty([self.K, self.X.shape[-1]])
+                self.centroids = np.zeros([self.K, self.X.shape[-1]])
 
                 # Points sera nuestro iterador de la lista de puntos de la imagen.
                 point = 0
