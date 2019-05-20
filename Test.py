@@ -251,7 +251,6 @@ def TestSolution(Test, Options, GTFile, NImage, tests):
         Options['single_thr'] *= 1.10
         
         lab,ind,k_m = lb.processImage(im, Options)
-        print(lab)
         Results.append(CheckTest(Message, lab, File, student))
         Messages.append(Message)
 

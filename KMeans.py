@@ -193,7 +193,12 @@ class KMeans():
                 self.centroids[0] = self.X[0]
                 while ctr < self.K:
                     # ...si nuestro punto no esta en centroides...
-                    if self.X[point] not in self.centroids:
+                    found = False
+                    for c in self.centroids:
+                        if np.array_equal(c, self.X[point]):
+                            found = True
+
+                    if not found:
                         # ...se lo asignaremos.
                         self.centroids[ctr] = self.X[point]
                         ctr += 1
@@ -358,7 +363,11 @@ class KMeans():
             # ...calcula las distancias de entre los puntos y sus centroides...
             dist_p2c = distance(self.X, self.centroids)
             # ...y la distancia entre los centroides y el centro de todos los puntos.
-            dist_c2c = distance(self.centroids, np.mean(self.X, axis=0))
+            if self.K == 1:
+                dist_c2c = np.array([[1]])
+            else:
+                dist_c2c = distance(np.array([np.mean(self.X, axis=0)]), self.centroids)
+            print(self.K,dist_c2c[0])
 
             avg_intra_dist = 0 # Numerador
             avg_inter_dist = 0 # Denominador
@@ -370,7 +379,7 @@ class KMeans():
                     # ...calcula la distancia entre todos los puntos y el centroide.
                     avg_intra_dist += np.sum(dist_p2c[:, ctr][self.clusters == ctr])*(1/self.X[self.clusters == ctr].shape[0])*(1/self.K)
                 # Finalmente calcula la media de cada centroide al centro.
-                avg_inter_dist += np.sum(dist_c2c[ctr])*(1/self.K)
+            avg_inter_dist = np.sum(dist_c2c[0]*(1/self.K))
 
             # Devuelve la razon entre la intra distancia y la interdistancia.
             return avg_intra_dist / avg_inter_dist
