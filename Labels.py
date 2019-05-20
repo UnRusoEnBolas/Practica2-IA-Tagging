@@ -124,8 +124,14 @@ def processImage(im, options):
 ##  1- CHANGE THE IMAGE TO THE CORRESPONDING COLOR SPACE FOR KMEANS
     if options['colorspace'].lower() == 'ColorNaming'.lower():  
         im = cn.ImColorNamingTSELabDescriptor(im)
-    elif options['colorspace'].lower() == 'Lab'.lower():        
+    elif options['colorspace'].lower() == 'Lab'.lower():
         im = color.rgb2lab(im)
+    elif options['colorspace'].lower() == 'HSV'.lower():
+        im = color.rgb2hsv(im)
+    elif options['colorspace'].lower() == 'XYZ'.lower():
+        im = color.rgb2xyz(im)
+    elif options['colorspace'].lower() == 'YCBCR'.lower():
+        im = color.rgb2ycbcr(im)
 
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
     if options['K']<2: # find the bes K
@@ -136,8 +142,16 @@ def processImage(im, options):
         kmeans.run()
 
 ##  3- GET THE NAME LABELS DETECTED ON THE 11 DIMENSIONAL SPACE
-    if options['colorspace'].lower() == 'RGB'.lower():        
-        pass
+    if options['colorspace'].lower() == 'ColorNaming'.lower():
+        im = cn.ColorName2rgb(im)
+    elif options['colorspace'].lower() == 'Lab'.lower():
+        im = color.lab2rgb(im)
+    elif options['colorspace'].lower() == 'HSV'.lower():
+        im = color.hsv2rgb(im)
+    elif options['colorspace'].lower() == 'XYZ'.lower():
+        im = color.xyz2rgb(im)
+    elif options['colorspace'].lower() == 'YCBCR'.lower():
+        im = color.ycbcr2rgb(im)
 
 #########################################################
 ##  THE FOLLOWING 2 END LINES SHOULD BE KEPT UNMODIFIED

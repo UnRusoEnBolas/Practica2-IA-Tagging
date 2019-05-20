@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     #'colorspace': 'RGB', 'Lab' o 'ColorNaming'
     t = time.time()
-    options = {'colorspace':'RGB', 'K':3, 'synonyms':False, 'single_thr':0.9, 'verbose':False, 'km_init':'first', 'metric':'basic'}
+    options = {'colorspace':'HSV', 'K':3, 'synonyms':False, 'single_thr':0.9, 'verbose':False, 'km_init':'first', 'metric':'basic'}
 
     ImageFolder = 'Images'
     GTFile = 'LABELSlarge.txt'
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     for gt in GT:
         print(gt[0])
         im = io.imread(ImageFolder+"/"+gt[0])
-        colors,which,kmeans = lb.processImage(im, options)
+        colors,_,_ = lb.processImage(im, options)
         DBcolors.append(colors)
         
     encert,_ = lb.evaluate(DBcolors, GT, options)
