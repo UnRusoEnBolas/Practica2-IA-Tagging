@@ -76,12 +76,12 @@ def getLabels(kmeans, options):
     """
 
     colors = np.array(["Red", "Orange", "Brown", "Yellow", "Green", "Blue", "Purple", "Pink", "Black", "Grey", "White"])
-
-    cent = cn.ImColorNamingTSELabDescriptor(kmeans.centroids)
+    
+    #cent = cn.ImColorNamingTSELabDescriptor(kmeans.centroids)
     meaningful_colors = []
     unique = []
 
-    for c in cent:
+    for c in kmeans.centroids:
         bool_array = c>options['single_thr']
         if bool_array[bool_array==True].shape[0]:
 
@@ -90,7 +90,7 @@ def getLabels(kmeans, options):
             color_to_append = colors[max_arg]
             arg_to_append = max_arg
         else:
-            sorted_idx = np.flip(np.argsort(c))
+            sorted_idx = np.flip(np.argsort(c), axis = 0)
 
             color_to_append = np.sort([colors[sorted_idx[0]], colors[sorted_idx[1]]])
             color_to_append = color_to_append[0]+color_to_append[1]
@@ -101,7 +101,21 @@ def getLabels(kmeans, options):
             unique.append(arg_to_append)
 
     return meaningful_colors, unique
+    #No estaba funcionando bien
+    '''
+    meaningful_colors = []
+    unique = []
 
+    for centroid in kmeans.centroids:
+        if np.max(centroid) > options['single_thr']:
+            if colors[np.argmax(centroid)] in meaningful_colors:
+                print("Already in the list")
+            else:
+                meaningful_colors.append(colors[np.argmax(centroid)])
+                unique.append([centroid])
+
+    return meaningful_colors, unique
+    '''
 
 def processImage(im, options):
     """@brief   Finds the colors present on the input image

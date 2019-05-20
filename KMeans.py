@@ -188,8 +188,9 @@ class KMeans():
                 self.centroids = np.zeros([self.K, self.X.shape[-1]])
 
                 # Points sera nuestro iterador de la lista de puntos de la imagen.
-                point = 0
-                ctr = 0
+                point = 1
+                ctr = 1
+                self.centroids[0] = self.X[0]
                 while ctr < self.K:
                     # ...si nuestro punto no esta en centroides...
                     if self.X[point] not in self.centroids:
