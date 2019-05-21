@@ -130,9 +130,9 @@ def processImage(im, options):
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
 ##  3- GET THE NAME LABELS DETECTED ON THE 11 DIMENSIONAL SPACE
 #########################################################
-    if options['colorspace'].lower() == 'HSV'.lower():
-        im = color.rgb2hsv(im)
-    elif options['colorspace'].lower() == 'ColorNaming'.lower():
+    #if options['colorspace'].lower() == 'HSV'.lower():
+    #    im = color.rgb2hsv(im)
+    if options['colorspace'].lower() == 'ColorNaming'.lower():
         im = cn.ImColorNamingTSELabDescriptor(im)
 
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
@@ -143,10 +143,12 @@ def processImage(im, options):
         kmeans = km.KMeans(im, options['K'], options)
         kmeans.run()
 
+    '''
     if options['colorspace'].lower() == 'HSV'.lower():
         im = color.rgb2hsv(im)
         kmeans.centroids = color.hsv2rgb(np.array([[kmeans.centroids]]))*255
         print(kmeans.centroids)
+    '''
 
 #########################################################
 ##  THE FOLLOWING 2 END LINES SHOULD BE KEPT UNMODIFIED

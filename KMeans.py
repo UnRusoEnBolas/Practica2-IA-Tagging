@@ -323,7 +323,7 @@ class KMeans():
             Este metodo se encarga de calcular cual es el valor optimo de K para tener
             una buena agrupacion y encontrar los colores(grupos) mas relevantes.
         """
-
+        '''
         fisher_results = [] # Variable donde guardaremos los resultados de optimalidad de dicha K
         best_k = 0 # Contador de que K es la actual
         cmp = True # Almacenador de la comparacion heuristica por la cual determinamos que ya no hay mejor K
@@ -346,6 +346,41 @@ class KMeans():
                 cmp = 3*(fisher_results[best_k-1] - fisher_results[best_k-2]) < (fisher_results[best_k-2] - fisher_results[best_k-3])
         best_k = best_k-1
         return best_k
+        '''
+        
+        fisher_results = []
+        for numK in range(2, 11):
+            self._init_rest(numK)
+            self.run()
+            fisher_results.append(self.fitting())
+        
+
+        Po = [2, fisher_results[0]]
+        Pf = [10, fisher_results[8]]
+        m = (Po[1]-Pf[1])/(Po[0]-Pf[0])
+        n = Po[1]-m*Po[0]
+        imaginaryLineY = []
+        imaginaryLineX = []
+        for x in range(2,11):
+            y = m*x+n
+            imaginaryLineY.append(y)
+            imaginaryLineX.append(x)
+        distances = []
+        Po = np.array(Po)
+        Pf = np.array(Pf)
+        for x,y in zip(range(2,11), fisher_results):
+            distances.append(np.abs((Pf[1]-Po[1])*x-(Pf[0]-Po[0])*y+Pf[0]*Po[1]-Pf[1]*Po[0])/(np.sqrt(((Pf[1]-Po[1])**2)+((Pf[0]-Po[0])**2))))
+        bestK = np.argmax(distances)+2
+
+
+        plt.plot(range(2,11), fisher_results, linestyle='-', marker='o', color='b')
+        plt.plot(imaginaryLineX, imaginaryLineY, linestyle='-', marker='o', color='r')
+        plt.plot(bestK, fisher_results[bestK-2], marker='o', color='g', markersize=10)
+        plt.show()
+
+
+        
+        return bestK
 
     def fitting(self):
         """
