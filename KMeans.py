@@ -143,6 +143,8 @@ class KMeans():
             options['fitting'] = 'Fisher'
         if not 'metric' in options:
             options['metric'] = 'basic'
+        if not 'bestKmethod' in option:
+            options['bestKmethod'] = 'superBestK'
 
         self.options = options
 
@@ -323,64 +325,62 @@ class KMeans():
             Este metodo se encarga de calcular cual es el valor optimo de K para tener
             una buena agrupacion y encontrar los colores(grupos) mas relevantes.
         """
-        '''
-        fisher_results = [] # Variable donde guardaremos los resultados de optimalidad de dicha K
-        best_k = 0 # Contador de que K es la actual
-        cmp = True # Almacenador de la comparacion heuristica por la cual determinamos que ya no hay mejor K
+        if options['bestKmethod'] == 'normalBestK':
+            fisher_results = [] # Variable donde guardaremos los resultados de optimalidad de dicha K
+            best_k = 0 # Contador de que K es la actual
+            cmp = True # Almacenador de la comparacion heuristica por la cual determinamos que ya no hay mejor K
 
-        # Mientras best_k menor o igual a 3 o la heuristica nos diga que pueden haber mejores K...
-        while best_k < 3 or cmp:
-            # ...pasa a la siguiente K...
-            best_k += 1
+            # Mientras best_k menor o igual a 3 o la heuristica nos diga que pueden haber mejores K...
+            while best_k < 3 or cmp:
+                # ...pasa a la siguiente K...
+                best_k += 1
 
-            # ...inicializa el programa con la nueva K...
-            self._init_rest(best_k)
-            # ...ejecuta el programa...
-            self.run()
-            # ...y almacena su optimalidad.
-            fisher_results.append(self.fitting())
+                # ...inicializa el programa con la nueva K...
+                self._init_rest(best_k)
+                # ...ejecuta el programa...
+                self.run()
+                # ...y almacena su optimalidad.
+                fisher_results.append(self.fitting())
 
-            # Si cumplimos un minimo de iteraciones...
-            if best_k >= 3:
-                # ...comprueba que el 3 veces el cambio entre un punto y su anterior es mas grande que el de este punto y el siguiente.
-                cmp = 3*(fisher_results[best_k-1] - fisher_results[best_k-2]) < (fisher_results[best_k-2] - fisher_results[best_k-3])
-        best_k = best_k-1
-        return best_k
-        '''
-        
-        fisher_results = []
-        for numK in range(2, 11):
-            self._init_rest(numK)
-            self.run()
-            fisher_results.append(self.fitting())
-        
+                # Si cumplimos un minimo de iteraciones...
+                if best_k >= 3:
+                    # ...comprueba que el 3 veces el cambio entre un punto y su anterior es mas grande que el de este punto y el siguiente.
+                    cmp = 3*(fisher_results[best_k-1] - fisher_results[best_k-2]) < (fisher_results[best_k-2] - fisher_results[best_k-3])
+            best_k = best_k-1
+            return best_k
 
-        Po = [2, fisher_results[0]]
-        Pf = [10, fisher_results[8]]
-        m = (Po[1]-Pf[1])/(Po[0]-Pf[0])
-        n = Po[1]-m*Po[0]
-        imaginaryLineY = []
-        imaginaryLineX = []
-        for x in range(2,11):
-            y = m*x+n
-            imaginaryLineY.append(y)
-            imaginaryLineX.append(x)
-        distances = []
-        Po = np.array(Po)
-        Pf = np.array(Pf)
-        for x,y in zip(range(2,11), fisher_results):
-            distances.append(np.abs((Pf[1]-Po[1])*x-(Pf[0]-Po[0])*y+Pf[0]*Po[1]-Pf[1]*Po[0])/(np.sqrt(((Pf[1]-Po[1])**2)+((Pf[0]-Po[0])**2))))
-        bestK = np.argmax(distances)+2
+        elif self.options['bestKmethod'] == 'superBestK'
+            fisher_results = []
+            for numK in range(2, 11):
+                self._init_rest(numK)
+                self.run()
+                fisher_results.append(self.fitting())
+            
 
+            Po = [2, fisher_results[0]]
+            Pf = [10, fisher_results[8]]
+            m = (Po[1]-Pf[1])/(Po[0]-Pf[0])
+            n = Po[1]-m*Po[0]
+            imaginaryLineY = []
+            imaginaryLineX = []
+            for x in range(2,11):
+                y = m*x+n
+                imaginaryLineY.append(y)
+                imaginaryLineX.append(x)
+            distances = []
+            Po = np.array(Po)
+            Pf = np.array(Pf)
+            for x,y in zip(range(2,11), fisher_results):
+                distances.append(np.abs((Pf[1]-Po[1])*x-(Pf[0]-Po[0])*y+Pf[0]*Po[1]-Pf[1]*Po[0])/(np.sqrt(((Pf[1]-Po[1])**2)+((Pf[0]-Po[0])**2))))
+            bestK = np.argmax(distances)+2
 
-        plt.plot(range(2,11), fisher_results, linestyle='-', marker='o', color='b')
-        plt.plot(imaginaryLineX, imaginaryLineY, linestyle='-', marker='o', color='r')
-        plt.plot(bestK, fisher_results[bestK-2], marker='o', color='g', markersize=10)
-        plt.show()
+            if self.options['verbose'] == True:
+                plt.plot(range(2,11), fisher_results, linestyle='-', marker='o', color='b')
+                plt.plot(imaginaryLineX, imaginaryLineY, linestyle='-', marker='o', color='r')
+                plt.plot(bestK, fisher_results[bestK-2], marker='o', color='g', markersize=10)
+                plt.show()
 
-
-        
-        return bestK
+            return bestK
 
     def fitting(self):
         """
