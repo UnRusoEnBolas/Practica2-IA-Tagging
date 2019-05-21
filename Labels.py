@@ -144,7 +144,9 @@ def processImage(im, options):
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
     if options['K']<2: # find the bes K
         kmeans = km.KMeans(im, 0, options)
-        kmeans.bestK()
+        recommended_k = kmeans.bestK()
+        kmeans = km.KMeans(im, recommended_k, options)
+        kmeans.run()
     else:
         kmeans = km.KMeans(im, options['K'], options)
         kmeans.run()

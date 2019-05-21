@@ -20,21 +20,29 @@ if __name__ == "__main__":
 
     #'colorspace': 'RGB', 'Lab' o 'ColorNaming'
     t = time.time()
-    options = {'colorspace':'HSV', 'K':3, 'synonyms':False, 'single_thr':0.9, 'verbose':True, 'km_init':'center', 'metric':'basic', 'tolerance':10}
+    options = {'K':0, 'colorspace':'RGB', 'km_init':'center', 'bestKmethod':'super', 'fitting':'fisher'}
+
+
+
 
     ImageFolder = 'Images'
-    GTFile = 'LABELSsmall.txt'
+    GTFile = 'LABELSlarge.txt'
     
     GTFile = ImageFolder + '/' + GTFile
     GT = lb.loadGT(GTFile)
 
     DBcolors = []
+    kpromedio = 0
     for gt in GT:
         print(gt[0])
         im = io.imread(ImageFolder+"/"+gt[0])
-        colors,_,_ = lb.processImage(im, options)
+        colors,which, kmeans = lb.processImage(im, options)
         DBcolors.append(colors)
-        
+        kpromedio += kmeans.K
+
+    kpromedio = kpromedio/len(GT)
+
+    print("K Promig: ", kpromedio)
     encert,_ = lb.evaluate(DBcolors, GT, options)
     print("Encert promig: "+ '%.2f' % (encert*100) + '%')
     print(time.time()-t)

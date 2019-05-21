@@ -144,7 +144,9 @@ class KMeans():
         if not 'metric' in options:
             options['metric'] = 'basic'
         if not 'bestKmethod' in options:
-            options['bestKmethod'] = 'superBestK'
+            options['bestKmethod'] = 'super'
+        if not 'single_thr' in options:
+            options['single_thr'] = 0.9
 
         self.options = options
 
@@ -328,7 +330,7 @@ class KMeans():
             Este metodo se encarga de calcular cual es el valor optimo de K para tener
             una buena agrupacion y encontrar los colores(grupos) mas relevantes.
         """
-        if self.options['bestKmethod'] == 'normalBestK':
+        if self.options['bestKmethod'] == 'normal':
             fisher_results = [] # Variable donde guardaremos los resultados de optimalidad de dicha K
             best_k = 0 # Contador de que K es la actual
             cmp = True # Almacenador de la comparacion heuristica por la cual determinamos que ya no hay mejor K
@@ -352,7 +354,7 @@ class KMeans():
             best_k = best_k-1
             return best_k
 
-        elif self.options['bestKmethod'] == 'superBestK':
+        elif self.options['bestKmethod'] == 'super':
             fisher_results = []
             for numK in range(2, 11):
                 self._init_rest(numK)

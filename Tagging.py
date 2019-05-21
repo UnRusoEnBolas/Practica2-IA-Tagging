@@ -30,7 +30,7 @@ will check out on the 'options_name' key
 """
 COLORSSPACE = {'key':'colorspace','options_gui':[('RBG','RGB'),('CIE Lab', 'Lab'),('11 basic colors','ColorNaming'),('HSV','HSV')]}
 FITTING = {'key':'fitting','options_gui':[('None','None'),('Fisher', 'Fisher'),('Other', 'Other')]}
-CENTROIDSINIT = {'key':'km_init','options_gui':[('First points','first'),('Randomize', 'random'),('Other','Other')]}
+CENTROIDSINIT = {'key':'km_init','options_gui':[('First points','first'),('Randomize', 'random'),('Center','center'),('Other','Other')]}
 SIMILARITY = {'key':'metric','options_gui':[('Basic','basic'),('Other 1','other1'),('Other 2','other2')]}
  
 class Tagging(Frame):
