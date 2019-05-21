@@ -81,28 +81,36 @@ def getLabels(kmeans, options):
         cent = kmeans.centroids
     meaningful_colors = []
     unique = []
+    controlDict = {}
+    centIdx = 0
 
     for c in cent:
-        bool_array = c>options['single_thr']
-        if bool_array[bool_array==True].shape[0]:
+        if np.max(c) > options['single_thr']:
+            if cn.colors[np.argmax(c)] not in controlDict.keys():
+                controlDict[cn.colors[np.argmax(c)]] = [] 
+                controlDict[cn.colors[np.argmax(c)]].append(centIdx)
+            else:
+                controlDict[cn.colors[np.argmax(c)]].append(centIdx)
+            centIdx += 1
 
-            max_arg = np.argmax(c)
-            color_to_append = cn.colors[max_arg]
-            arg_to_append = max_arg
         else:
             sorted_idx = np.flip(np.argsort(c), axis = 0)
-
             color_to_append = np.sort([cn.colors[sorted_idx[0]], cn.colors[sorted_idx[1]]])
             color_to_append = color_to_append[0]+color_to_append[1]
-            if cn.colors[sorted_idx[0]] > cn.colors[sorted_idx[1]]:
-                arg_to_append = [sorted_idx[0], sorted_idx[1]]
+            if color_to_append not in controlDict:
+                controlDict[color_to_append] = []
+                controlDict[color_to_append].append(centIdx)
             else:
-                arg_to_append = [sorted_idx[1], sorted_idx[0]]
+                controlDict[color_to_append].append(centIdx)
+            centIdx += 1
+        
+    for meaningfulColor in controlDict.keys():
+        meaningful_colors.append(meaningfulColor)
+        auxList = []
+        for centroid in controlDict[meaningfulColor]:
+            auxList.append(centroid)
+        unique.append(auxList)
 
-        if color_to_append not in meaningful_colors:
-            meaningful_colors.append(color_to_append)
-            unique.append(arg_to_append)
-    print(meaningful_colors, unique)
     return meaningful_colors, unique
 
 def processImage(im, options):
@@ -124,6 +132,8 @@ def processImage(im, options):
 #########################################################
     if options['colorspace'].lower() == 'HSV'.lower():
         im = color.rgb2hsv(im)
+    elif options['colorspace'].lower() == 'ColorNaming'.lower():
+        im = cn.ImColorNamingTSELabDescriptor(im)
 
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
     if options['K']<2: # find the bes K
