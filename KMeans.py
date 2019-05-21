@@ -143,7 +143,7 @@ class KMeans():
             options['fitting'] = 'Fisher'
         if not 'metric' in options:
             options['metric'] = 'basic'
-        if not 'bestKmethod' in option:
+        if not 'bestKmethod' in options:
             options['bestKmethod'] = 'superBestK'
 
         self.options = options
@@ -184,29 +184,32 @@ class KMeans():
             # Aqui creamos la matriz de centroides de K*nCanales con un valor aleatorio entre 0 y 255.
             np.random.seed()
             self.centroids = np.random.rand(self.K, self.X.shape[1])*255
-        else:
-            if self.options['km_init'].lower() == 'first':
-                # Creamos la matriz centroides con tamaño K*nCanales y sin valores en sus celdas.
-                self.centroids = np.zeros([self.K, self.X.shape[-1]])
+        elif self.options['km_init'].lower() == 'first':
+            # Creamos la matriz centroides con tamaño K*nCanales y sin valores en sus celdas.
+            self.centroids = np.zeros([self.K, self.X.shape[-1]])
 
-                # Points sera nuestro iterador de la lista de puntos de la imagen.
-                point = 1
-                ctr = 1
-                self.centroids[0] = self.X[0]
-                while ctr < self.K:
-                    # ...si nuestro punto no esta en centroides...
-                    found = False
-                    for c in self.centroids:
-                        if np.array_equal(c, self.X[point]):
-                            found = True
+            # Points sera nuestro iterador de la lista de puntos de la imagen.
+            point = 1
+            ctr = 1
+            self.centroids[0] = self.X[0]
+            while ctr < self.K:
+                # ...si nuestro punto no esta en centroides...
+                found = False
+                for c in self.centroids:
+                    if np.array_equal(c, self.X[point]):
+                        found = True
 
-                    if not found:
-                        # ...se lo asignaremos.
-                        self.centroids[ctr] = self.X[point]
-                        ctr += 1
+                if not found:
+                    # ...se lo asignaremos.
+                    self.centroids[ctr] = self.X[point]
+                    ctr += 1
 
-                    # Pasamos al siguiente punto
-                    point += 1
+                # Pasamos al siguiente punto
+                point += 1
+        elif self.options['km_init'].lower() == 'not_so_random':
+            # Aqui creamos la matriz de centroides de K*nCanales con un valor aleatorio 127.5±10
+            np.random.seed()
+            self.centroids = (np.random.rand(self.K, self.X.shape[1])*10 + 122.5)
 
 
     def _cluster_points(self):
@@ -325,7 +328,7 @@ class KMeans():
             Este metodo se encarga de calcular cual es el valor optimo de K para tener
             una buena agrupacion y encontrar los colores(grupos) mas relevantes.
         """
-        if options['bestKmethod'] == 'normalBestK':
+        if self.options['bestKmethod'] == 'normalBestK':
             fisher_results = [] # Variable donde guardaremos los resultados de optimalidad de dicha K
             best_k = 0 # Contador de que K es la actual
             cmp = True # Almacenador de la comparacion heuristica por la cual determinamos que ya no hay mejor K
@@ -349,7 +352,7 @@ class KMeans():
             best_k = best_k-1
             return best_k
 
-        elif self.options['bestKmethod'] == 'superBestK'
+        elif self.options['bestKmethod'] == 'superBestK':
             fisher_results = []
             for numK in range(2, 11):
                 self._init_rest(numK)
@@ -402,7 +405,6 @@ class KMeans():
                 dist_c2c = np.array([[1]])
             else:
                 dist_c2c = distance(np.array([np.mean(self.X, axis=0)]), self.centroids)
-            print(self.K,dist_c2c[0])
 
             avg_intra_dist = 0 # Numerador
             avg_inter_dist = 0 # Denominador
@@ -419,6 +421,14 @@ class KMeans():
             # Devuelve la razon entre la intra distancia y la interdistancia.
             return avg_intra_dist / avg_inter_dist
 
+        elif self.options['fitting'].lower() == 'silhouette':
+            dist = distance(self.X, self.centroids)
+            avg_dis = 0
+            for ctr in range(self.K):
+                avg_dis += (np.mean(dist[:, ctr][self.clusters == ctr]) / np.mean((dist[:, ctr][self.clusters != ctr])))*(1/self.K)
+            print(avg_dis)
+            return avg_dis
+
         else:
             # Si la opcion de fitting no es fisher sencillamente devuelve un valor aleatorio entre 0 y 1.
             return np.random.rand(1)
@@ -430,39 +440,39 @@ class KMeans():
             intuitiva que esta ocurriendo en cada iteracion del bucle.
 
         """
+        if self.options['colorspace'] == 'RGB':
+            fig = plt.figure()
+            ax = fig.add_subplot(111, projection='3d')
 
-        fig = plt.figure()
-        ax = fig.add_subplot(111, projection='3d')
-
-        ax.scatter(self.X[:, 0], self.X[:, 1], self.X[:, 2], c=self.X / 255, marker='.', alpha=0.3)
-        ax.scatter(self.centroids[:, 0], self.centroids[:, 1], self.centroids[:, 2], c=self.centroids / 255, marker='o', s=5000, alpha=0.75, linewidths=1, edgecolors="k")
+            ax.scatter(self.X[:, 0], self.X[:, 1], self.X[:, 2], c=self.X / 255, marker='.', alpha=0.3)
+            ax.scatter(self.centroids[:, 0], self.centroids[:, 1], self.centroids[:, 2], c=self.centroids / 255, marker='o', s=5000, alpha=0.75, linewidths=1, edgecolors="k")
 
 
-        textdict = "K: "+str(self.K)+"\nInit: "+str(self.options["km_init"]+"\nIter: "+str(self.num_iter))
-        box = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+            textdict = "K: "+str(self.K)+"\nInit: "+str(self.options["km_init"]+"\nIter: "+str(self.num_iter))
+            box = dict(boxstyle='round', facecolor='wheat', alpha=0.5)
 
-        # place a text box in upper left in axes coords
-        ax.text( 200, 100, 200, textdict, transform=ax.transAxes, fontsize=16, horizontalalignment="left", verticalalignment="bottom", bbox=box)
+            # place a text box in upper left in axes coords
+            ax.text( 200, 100, 200, textdict, transform=ax.transAxes, fontsize=16, horizontalalignment="left", verticalalignment="bottom", bbox=box)
 
-        ax.set_xlabel('Red')
-        ax.set_ylabel('Green')
-        ax.set_zlabel('Blue')
+            ax.set_xlabel('Red')
+            ax.set_ylabel('Green')
+            ax.set_zlabel('Blue')
 
-        plt.show()
+            plt.show()
 
     def show_image(self):
         """
             Esta funcion muestra la imagen que se esta procesando. Ademas aplica un filtro de imagen
             haciendo que cada punto se transforme en el color de su centroide.
         """
-
-        if self.num_iter == 0:
-            plt.imshow(self.original_image)
-        else:
-            new_image = np.copy(self.X)
-            for ctr in range(self.K):
-                if new_image[self.clusters == ctr].shape[0] > 0:
-                    new_image[self.clusters == ctr] = self.centroids[ctr]
-            plt.imshow(new_image.reshape(self.original_image.shape))
-            plt.show()
-            plt.pause(1)
+        if self.options['colorspace'] == 'RGB':
+            if self.num_iter == 0:
+                plt.imshow(self.original_image)
+            else:
+                new_image = np.copy(self.X)
+                for ctr in range(self.K):
+                    if new_image[self.clusters == ctr].shape[0] > 0:
+                        new_image[self.clusters == ctr] = self.centroids[ctr]
+                plt.imshow(new_image.reshape(self.original_image.shape))
+                plt.show()
+                plt.pause(1)

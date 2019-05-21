@@ -15,10 +15,10 @@ if __name__ == "__main__":
 
     #'colorspace': 'RGB', 'Lab' o 'ColorNaming'
     t = time.time()
-    options = {'colorspace':'RGB', 'K':0, 'synonyms':False, 'single_thr':0.9, 'verbose':False, 'km_init':'first', 'metric':'basic'}
+    options = {'colorspace':'LAB', 'K':0, 'synonyms':False, 'single_thr':0.9, 'verbose':True, 'km_init':'not_so_random', 'metric':'basic', 'fitting':'silhouette'}
 
     ImageFolder = 'Images'
-    GTFile = 'LABELSlarge.txt'
+    GTFile = 'LABELSultrasmall.txt'
     
     GTFile = ImageFolder + '/' + GTFile
     GT = lb.loadGT(GTFile)

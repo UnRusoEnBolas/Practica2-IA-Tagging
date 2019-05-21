@@ -111,6 +111,7 @@ def getLabels(kmeans, options):
             auxList.append(centroid)
         unique.append(auxList)
 
+    # print(meaningful_colors)
     return meaningful_colors, unique
 
 def processImage(im, options):
@@ -130,10 +131,15 @@ def processImage(im, options):
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
 ##  3- GET THE NAME LABELS DETECTED ON THE 11 DIMENSIONAL SPACE
 #########################################################
-    #if options['colorspace'].lower() == 'HSV'.lower():
-    #    im = color.rgb2hsv(im)
+
+##  1- CHANGE THE IMAGE TO THE CORRESPONDING COLOR SPACE FOR KMEANS
     if options['colorspace'].lower() == 'ColorNaming'.lower():
         im = cn.ImColorNamingTSELabDescriptor(im)
+    elif options['colorspace'].lower() == 'HSV'.lower():
+        im = color.rgb2hsv(im/255)*255
+    elif options['colorspace'].lower() == 'LAB'.lower():
+        im = color.rgb2lab(im/255)*255
+
 
 ##  2- APPLY KMEANS ACCORDING TO 'OPTIONS' PARAMETER
     if options['K']<2: # find the bes K
@@ -143,12 +149,13 @@ def processImage(im, options):
         kmeans = km.KMeans(im, options['K'], options)
         kmeans.run()
 
-    '''
+##  3- GET THE NAME LABELS DETECTED ON THE 11 DIMENSIONAL SPACE
     if options['colorspace'].lower() == 'HSV'.lower():
-        im = color.rgb2hsv(im)
-        kmeans.centroids = color.hsv2rgb(np.array([[kmeans.centroids]]))*255
-        print(kmeans.centroids)
-    '''
+        im = color.hsv2rgb(im/255)*255
+        kmeans.centroids = color.hsv2rgb(np.array([kmeans.centroids/255]))[0]*255
+    elif options['colorspace'].lower() == 'LAB'.lower():
+        im = color.lab2rgb(im/255)*255
+        kmeans.centroids = color.lab2rgb(np.array([kmeans.centroids / 255]))[0] * 255
 
 #########################################################
 ##  THE FOLLOWING 2 END LINES SHOULD BE KEPT UNMODIFIED
