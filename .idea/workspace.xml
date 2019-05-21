@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c24bb14-bca4-4667-9c6d-781749cbe1b8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EvaluationTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluationTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KMeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/KMeans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Labels.py" beforeDir="false" afterPath="$PROJECT_DIR$/Labels.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tagging.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tagging.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,18 +13,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$Test.coverage" NAME="Test Coverage Results" MODIFIED="1558390333123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$EvaluationTest.coverage" NAME="EvaluationTest Coverage Results" MODIFIED="1558467705183" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$EvaluationTest.coverage" NAME="EvaluationTest Coverage Results" MODIFIED="1558472820790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$Test.coverage" NAME="Test Coverage Results" MODIFIED="1558473588322" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$ownEvaluationTest.coverage" NAME="ownEvaluationTest Coverage Results" MODIFIED="1558461523937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$Tagging.coverage" NAME="Tagging Coverage Results" MODIFIED="1558462530226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KMeans.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="345" column="26" lean-forward="true" selection-start-line="345" selection-start-column="26" selection-end-line="345" selection-end-column="26" />
+            <state relative-caret-position="83">
+              <caret line="325" column="27" lean-forward="true" selection-start-line="325" selection-start-column="27" selection-end-line="325" selection-end-column="27" />
               <folding>
                 <element signature="e#928#946#0" expanded="true" />
               </folding>
@@ -36,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Labels.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="148" column="20" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="20" />
+            <state relative-caret-position="407">
+              <caret line="154" column="4" lean-forward="true" selection-start-line="154" selection-start-column="4" selection-end-line="154" selection-end-column="54" />
               <folding>
                 <element signature="e#86#95#0" expanded="true" />
               </folding>
@@ -45,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EvaluationTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+            <state relative-caret-position="322">
+              <caret line="22" column="135" selection-start-line="22" selection-start-column="135" selection-end-line="22" selection-end-column="135" />
             </state>
           </provider>
         </entry>
@@ -71,13 +70,13 @@
         <option value="$PROJECT_DIR$/Test.py" />
         <option value="$PROJECT_DIR$/ownEvaluationTest.py" />
         <option value="$PROJECT_DIR$/Tagging.py" />
-        <option value="$PROJECT_DIR$/KMeans.py" />
         <option value="$PROJECT_DIR$/Labels.py" />
         <option value="$PROJECT_DIR$/EvaluationTest.py" />
+        <option value="$PROJECT_DIR$/KMeans.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
@@ -123,7 +122,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.EvaluationTest">
+  <component name="RunManager" selected="Python.Test">
     <configuration name="EvaluationTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Practica2-IA-Tagging" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -214,10 +213,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Test" />
         <item itemvalue="Python.EvaluationTest" />
         <item itemvalue="Python.Tagging" />
         <item itemvalue="Python.ownEvaluationTest" />
-        <item itemvalue="Python.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -252,15 +251,15 @@
       <workItem from="1558384078815" duration="6542000" />
       <workItem from="1558454302780" duration="175000" />
       <workItem from="1558454578609" duration="5692000" />
-      <workItem from="1558460690994" duration="6949000" />
+      <workItem from="1558460690994" duration="10760000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41336000" />
+    <option name="totallyTimeSpent" value="45147000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16044776" />
@@ -268,7 +267,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30444205" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26218852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -282,7 +281,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.05010661" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.27292112" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -361,20 +360,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/KMeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="362">
-          <caret line="345" column="26" lean-forward="true" selection-start-line="345" selection-start-column="26" selection-end-line="345" selection-end-column="26" />
-          <folding>
-            <element signature="e#928#946#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Labels.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="148" column="20" selection-start-line="148" selection-start-column="20" selection-end-line="148" selection-end-column="20" />
+        <state relative-caret-position="407">
+          <caret line="154" column="4" lean-forward="true" selection-start-line="154" selection-start-column="4" selection-end-line="154" selection-end-column="54" />
           <folding>
             <element signature="e#86#95#0" expanded="true" />
           </folding>
@@ -383,8 +372,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/EvaluationTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="33" column="17" lean-forward="true" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        <state relative-caret-position="322">
+          <caret line="22" column="135" selection-start-line="22" selection-start-column="135" selection-end-line="22" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/KMeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="325" column="27" lean-forward="true" selection-start-line="325" selection-start-column="27" selection-end-line="325" selection-end-column="27" />
+          <folding>
+            <element signature="e#928#946#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     #'colorspace': 'RGB', 'Lab' o 'ColorNaming'
     t = time.time()
-    options = {'K':0, 'colorspace':'RGB', 'km_init':'center', 'bestKmethod':'super', 'fitting':'fisher'}
+    options = {'K':3, 'colorspace':'RGB', 'km_init':'center', 'bestKmethod':'super', 'fitting':'fisher', 'verbose':True, 'tolerance':10}
 
 
 

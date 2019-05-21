@@ -211,7 +211,10 @@ class KMeans():
         elif self.options['km_init'].lower() == 'center':
             # Aqui creamos la matriz de centroides de K*nCanales con un valor aleatorio 127.5±10
             np.random.seed()
-            self.centroids = (np.random.rand(self.K, self.X.shape[1])*10 + 122.5)
+            if self.options['colorspace'].lower() == 'ColorNaming'.lower():
+                self.centroids = (np.random.rand(self.K, self.X.shape[1]) * 0.2 + 0.4)
+            else:
+                self.centroids = (np.random.rand(self.K, self.X.shape[1])*10 + 122.5)
 
 
     def _cluster_points(self):
@@ -312,7 +315,8 @@ class KMeans():
         self._iterate()
 
         # Si el numero de iteraciones no supere al maximo y mientras no hayamos convergido.
-        while self.options['max_iter'] > self.num_iter and self._converges() == False:
+
+        while self.options['max_iter'] > self.num_iter and not self._converges():
 
             # Si verbose es true ploteamos los datos
             if self.options['verbose'] and self.num_iter != 0:
@@ -379,7 +383,7 @@ class KMeans():
                 distances.append(np.abs((Pf[1]-Po[1])*x-(Pf[0]-Po[0])*y+Pf[0]*Po[1]-Pf[1]*Po[0])/(np.sqrt(((Pf[1]-Po[1])**2)+((Pf[0]-Po[0])**2))))
             bestK = np.argmax(distances)+2
 
-            if self.options['verbose'] == True:
+            if self.options['verbose']:
                 plt.plot(range(2,11), fisher_results, linestyle='-', marker='o', color='b')
                 plt.plot(imaginaryLineX, imaginaryLineY, linestyle='-', marker='o', color='r')
                 plt.plot(bestK, fisher_results[bestK-2], marker='o', color='g', markersize=10)
@@ -442,7 +446,7 @@ class KMeans():
             intuitiva que esta ocurriendo en cada iteracion del bucle.
 
         """
-        if self.options['colorspace'] == 'RGB':
+        if self.options['colorspace'].lower() == 'RGB'.lower():
             fig = plt.figure()
             ax = fig.add_subplot(111, projection='3d')
 
