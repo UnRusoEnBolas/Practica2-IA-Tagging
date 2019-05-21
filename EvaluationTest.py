@@ -20,7 +20,7 @@ if __name__ == "__main__":
 
     #'colorspace': 'RGB', 'Lab' o 'ColorNaming'
     t = time.time()
-    options = {'colorspace':'HSV', 'K':3, 'synonyms':False, 'single_thr':0.9, 'verbose':True, 'km_init':'centerRandom', 'metric':'basic', 'tolerance':10}
+    options = {'colorspace':'HSV', 'K':3, 'synonyms':False, 'single_thr':0.9, 'verbose':True, 'km_init':'center', 'metric':'basic', 'tolerance':10}
 
     ImageFolder = 'Images'
     GTFile = 'LABELSsmall.txt'

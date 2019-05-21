@@ -206,7 +206,7 @@ class KMeans():
 
                 # Pasamos al siguiente punto
                 point += 1
-        elif self.options['km_init'].lower() == 'not_so_random':
+        elif self.options['km_init'].lower() == 'center':
             # Aqui creamos la matriz de centroides de K*nCanales con un valor aleatorio 127.5±10
             np.random.seed()
             self.centroids = (np.random.rand(self.K, self.X.shape[1])*10 + 122.5)

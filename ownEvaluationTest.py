@@ -15,7 +15,7 @@ if __name__ == "__main__":
 
     #'colorspace': 'RGB', 'Lab' o 'ColorNaming'
     t = time.time()
-    options = {'colorspace':'LAB', 'K':0, 'synonyms':False, 'single_thr':0.9, 'verbose':True, 'km_init':'not_so_random', 'metric':'basic', 'fitting':'silhouette'}
+    options = {'colorspace':'LAB', 'K':0, 'synonyms':False, 'single_thr':0.9, 'verbose':True, 'km_init':'center', 'metric':'basic'}
 
     ImageFolder = 'Images'
     GTFile = 'LABELSultrasmall.txt'

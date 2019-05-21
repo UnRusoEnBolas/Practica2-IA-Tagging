@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8c24bb14-bca4-4667-9c6d-781749cbe1b8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/EvaluationTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/EvaluationTest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/KMeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/KMeans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Labels.py" beforeDir="false" afterPath="$PROJECT_DIR$/Labels.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ownEvaluationTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/ownEvaluationTest.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,8 +14,8 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$Test.coverage" NAME="Test Coverage Results" MODIFIED="1558390333123" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$EvaluationTest.coverage" NAME="EvaluationTest Coverage Results" MODIFIED="1558390771971" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$ownEvaluationTest.coverage" NAME="ownEvaluationTest Coverage Results" MODIFIED="1558460253297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$EvaluationTest.coverage" NAME="EvaluationTest Coverage Results" MODIFIED="1558461854854" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$ownEvaluationTest.coverage" NAME="ownEvaluationTest Coverage Results" MODIFIED="1558461523937" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Practica2_IA_Tagging$Tagging.coverage" NAME="Tagging Coverage Results" MODIFIED="1558458565047" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
@@ -25,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/KMeans.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="348">
-              <caret line="427" column="73" selection-start-line="427" selection-start-column="73" selection-end-line="427" selection-end-column="73" />
+            <state relative-caret-position="470">
+              <caret line="208" column="55" selection-start-line="208" selection-start-column="55" selection-end-line="208" selection-end-column="55" />
               <folding>
                 <element signature="e#928#946#0" expanded="true" />
               </folding>
@@ -37,7 +35,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Labels.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
+            <state relative-caret-position="365">
               <caret line="139" column="56" selection-start-line="139" selection-start-column="56" selection-end-line="139" selection-end-column="56" />
               <folding>
                 <element signature="e#86#95#0" expanded="true" />
@@ -49,8 +47,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ColorNaming.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4978">
-              <caret line="102" column="11" lean-forward="true" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="11" />
+            <state relative-caret-position="-187">
+              <caret line="102" column="11" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="11" />
               <folding>
                 <element signature="e#18#37#0" expanded="true" />
               </folding>
@@ -59,9 +57,18 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Test.py">
+        <entry file="file://$PROJECT_DIR$/EvaluationTest.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
+              <caret line="22" column="111" selection-start-line="22" selection-start-column="111" selection-end-line="22" selection-end-column="111" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4182">
               <caret line="252" column="50" selection-start-line="252" selection-start-column="50" selection-end-line="252" selection-end-column="50" />
             </state>
           </provider>
@@ -70,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ownEvaluationTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+            <state relative-caret-position="289">
+              <caret line="17" column="111" selection-start-line="17" selection-start-column="111" selection-end-line="17" selection-end-column="111" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -89,8 +96,8 @@
       <list>
         <option value="$PROJECT_DIR$/Images/LABELSultrasmall.txt" />
         <option value="$PROJECT_DIR$/Test.py" />
-        <option value="$PROJECT_DIR$/EvaluationTest.py" />
         <option value="$PROJECT_DIR$/Labels.py" />
+        <option value="$PROJECT_DIR$/EvaluationTest.py" />
         <option value="$PROJECT_DIR$/ownEvaluationTest.py" />
         <option value="$PROJECT_DIR$/KMeans.py" />
       </list>
@@ -143,7 +150,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ownEvaluationTest">
+  <component name="RunManager" selected="Python.EvaluationTest">
     <configuration name="EvaluationTest" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Practica2-IA-Tagging" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -234,9 +241,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.EvaluationTest" />
         <item itemvalue="Python.ownEvaluationTest" />
         <item itemvalue="Python.Tagging" />
-        <item itemvalue="Python.EvaluationTest" />
         <item itemvalue="Python.Test" />
       </list>
     </recent_temporary>
@@ -272,21 +279,23 @@
       <workItem from="1558384078815" duration="6542000" />
       <workItem from="1558454302780" duration="175000" />
       <workItem from="1558454578609" duration="5692000" />
+      <workItem from="1558460690994" duration="1166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34387000" />
+    <option name="totallyTimeSpent" value="35553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15884861" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16044776" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30444205" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30444205" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -300,7 +309,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.23240939" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.22547974" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -352,33 +361,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/EvaluationTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="22" column="152" selection-start-line="22" selection-start-column="152" selection-end-line="22" selection-end-column="152" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
+        <state relative-caret-position="4182">
           <caret line="252" column="50" selection-start-line="252" selection-start-column="50" selection-end-line="252" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ColorNaming.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4978">
-          <caret line="102" column="11" lean-forward="true" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="11" />
-          <folding>
-            <element signature="e#18#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Labels.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
+        <state relative-caret-position="365">
           <caret line="139" column="56" selection-start-line="139" selection-start-column="56" selection-end-line="139" selection-end-column="56" />
           <folding>
             <element signature="e#86#95#0" expanded="true" />
@@ -386,10 +378,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ColorNaming.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="102" column="11" selection-start-line="102" selection-start-column="4" selection-end-line="102" selection-end-column="11" />
+          <folding>
+            <element signature="e#18#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EvaluationTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="22" column="111" selection-start-line="22" selection-start-column="111" selection-end-line="22" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ownEvaluationTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
+        <state relative-caret-position="289">
+          <caret line="17" column="111" selection-start-line="17" selection-start-column="111" selection-end-line="17" selection-end-column="111" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
@@ -398,8 +407,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/KMeans.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="427" column="73" selection-start-line="427" selection-start-column="73" selection-end-line="427" selection-end-column="73" />
+        <state relative-caret-position="470">
+          <caret line="208" column="55" selection-start-line="208" selection-start-column="55" selection-end-line="208" selection-end-column="55" />
           <folding>
             <element signature="e#928#946#0" expanded="true" />
           </folding>
